@@ -1,0 +1,74 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header navbar-left">
+            <h4 class="navbar-text"><span class="glyphicon glyphicon-signal" id="iconeBrand"></span> Testando</h4>
+        </div>
+    </div>
+</nav>
+
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <pagination boundary-links="true" max-size="5" items-per-page="itemsPerPage" total-items="formFiltrado.length" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+            </div>
+            <div class="col-md-1">
+                <input type="button" class="btn btn-default btnCleanFilter" ng-click="cleanFilter()" value="Limpar Filtros">
+            </div>
+            <div class="col-md-1 quantItens">
+                <p ng-if='formFiltrado.length == 1'><strong>{{formFiltrado.length}} item</strong></p>
+                <p ng-if='formFiltrado.length != 1'><strong>{{formFiltrado.length}} itens</strong></p>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <form ng-submit="submeter(forms)" name="formIpt">
+            <div id="table">
+                <table class="table table-striped table-bordered table-hover table-responsive">
+                    <thead>
+                        <tr class="tr-config">
+                            <th><strong>Código IBGE</strong><br></th>
+                            <th ng-class="{'has-success': est != null}"><strong>Estado</strong><br>
+                                <select ng-class="{'has-color': est != null}" class="form-control inputTh" ng-change="filtroGeral();selectMunicipio(est);" ng-model="est" ng-options="est.uf as est.nome for est in estados">
+                                <option value="">Nenhum</option>
+                            </select>
+                                <div id="lupa"></div>
+                            </th>
+                            <th ng-class="{'has-success': muni != null}"><strong>Município</strong><br>
+                                <select ng-class="{'has-color': muni != null}" name="" id="" class="form-control inputTh" ng-change="filtroGeral()" ng-model="muni" ng-options="muni.cod_ibge as muni.nome_municipio for muni in municipios">
+                            <option value="">Nenhum</option>
+                        </select>
+                                <div id="lupa"></div>
+                            </th>
+                            <th ng-class="{'has-success': muniCont != null}"><strong>Município contatado</strong><br>
+                                <select ng-class="{'has-color': muniCont != null}" name="" id="" class="form-control inputTh" ng-change="filtroGeral()" ng-model="muniCont" ng-options="sn.value as sn.value for sn in simNao">
+                            <option value="">Nenhum</option>
+                        </select>
+                                <div id="lupa"></div>
+                            </th>
+                            <th><strong>Telefone</strong></th>
+                            <th><strong>Email</strong></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                            <td>
+                                <input type="text" mask="99999.999999/9999-99" ng-minlength="20" class="form-control inputTable" ng-blur="submeter(form)" ng-model="form.processo_sei">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control inputTable" ng-blur="submeter(form)" ng-model="form.email">
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+            </div>
+
+        </form>
+    </div>
+    <script></script>

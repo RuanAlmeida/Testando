@@ -1,0 +1,144 @@
+#table {
+    height: 580px;
+    overflow-x: scroll;
+}
+
+.tr-config{
+  background: #191919;
+    color: white;
+}
+
+select.has-color{
+    color: black;
+    background-color: #93ff95;
+}
+
+option {
+        color: black;
+        background-color: white;
+}
+
+#btnInvisivel {
+  background-color:transparent;
+  border:none;
+  color:transparent;
+  width:40px;
+  float:right;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  cursor: context-menu;
+}
+#btnInvisivel:active {
+  background-color:transparent;
+  border:none;
+  color:transparent;
+}
+#btnInvisivel:hover {
+  background-color:transparent;
+  border:none;
+  color:transparent;
+}
+
+.header-fixed {
+    width: 100%
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 150px;
+}
+
+.header-fixed > tbody > tr > td,
+.header-fixed > thead > tr > th {
+    width: 20%;
+    float: left;
+}
+
+th {
+    text-align: center;
+}
+
+.inputTable {
+    width: 200px;
+}
+
+.thTable {
+    width: 140px;
+    float: left;
+}
+
+.filterBtn {
+    width: 20px;
+    font-size: 10px;
+    color: #696969;
+    padding: 6px 2px 0px 2px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.filterBtn:hover {
+    color: black;
+}
+
+.inputTh {
+    padding-left: 23px;
+    min-width: 200px;
+    width: 100%;
+    float: left;
+}
+
+#obsLabel{
+    min-width: 400px;
+}
+
+.inputObs{
+    min-width: 400px;
+}
+
+/* formatação do elemento */
+
+#lupa {
+    float: left;
+    margin: -28px 0px 0px 10px;
+    cursor: pointer
+}
+
+/* formatação do conteúdo  */
+
+#lupa:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    content: "\f002";
+    color: black;
+}
+
+.search {
+    text-align: center;
+    width: 100%;
+}
+
+.quantItens {
+    margin-top: 24px;
+}
+
+.btnCleanFilter {
+    margin-top: 20px;
+}
