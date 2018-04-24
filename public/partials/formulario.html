@@ -51,14 +51,15 @@
 
 
                     <tbody>
-                    <td ng-repeat="form in forms">
-                                <input type="text"  ng-minlength="20" class="form-control inputTable" ng-model="form.nome_prefeito">
+                    <tr ng-repeat="form in forms">
+                                <td>
+                              {{form.nome_prefeito}}  
                             </td>
                             <td>
-                                <input type="text" mask="99999.999999/9999-99" ng-minlength="20" class="form-control inputTable" ng-model="form.telefone1">
+                            {{form.telefone1}}
                             </td>
                             <td>
-                                <input type="text" class="form-control inputTable" ng-model="form.email1">
+                                {{form.email1}}
                             </td>
                         </tr>
                     </tbody>
